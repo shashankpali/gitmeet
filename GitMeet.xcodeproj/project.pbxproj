@@ -109,8 +109,8 @@
 			isa = PBXGroup;
 			children = (
 				BF744904289928CC004B1FCC /* UIViewController+Extension.swift */,
-				BF74491828996DAB004B1FCC /* String+Extension.swift */,
 				BF74491B28997217004B1FCC /* UIImageView+Extension.swift */,
+				BF74491828996DAB004B1FCC /* String+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -174,14 +174,14 @@
 			isa = PBXGroup;
 			children = (
 				BFB088EF289815FD00B18F5D /* Defaults */,
+				BF74490F28993C43004B1FCC /* Model */,
 				BFB088F02898161E00B18F5D /* View */,
+				BF744906289929ED004B1FCC /* Extension */,
+				BF74491028993C4C004B1FCC /* Helpers */,
 				BFB088C52898120400B18F5D /* Main.storyboard */,
 				BFB088C82898120500B18F5D /* Assets.xcassets */,
 				BFB088CA2898120500B18F5D /* LaunchScreen.storyboard */,
 				BFB088CD2898120500B18F5D /* Info.plist */,
-				BF744906289929ED004B1FCC /* Extension */,
-				BF74491028993C4C004B1FCC /* Helpers */,
-				BF74490F28993C43004B1FCC /* Model */,
 			);
 			path = GitMeet;
 			sourceTree = "<group>";

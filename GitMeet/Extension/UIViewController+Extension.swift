@@ -8,8 +8,8 @@
 import UIKit
 
 extension UIViewController {
-     func showAlert(title:String, message msg: String, forActions: [AlertAction], callback:((String) -> Void)? = nil) {
-        let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+    func showAlert(title:String = "", message msg: String = "", forActions: [AlertAction], style: UIAlertController.Style = .alert, callback:((String) -> Void)? = nil) {
+        let alert = UIAlertController(title: title, message: msg, preferredStyle: style)
         
         for action in forActions {
             alert.addAction(UIAlertAction(title: action.title, style: action.style) { action in

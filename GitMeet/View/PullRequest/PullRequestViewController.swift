@@ -24,7 +24,6 @@ class PullRequestViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTable()
-        print(dataSource)
     }
     
     private func setupTable() {
@@ -51,6 +50,12 @@ class PullRequestViewController: UITableViewController {
         cell.setup(model: dataSource[indexPath.row])
         
         return cell
+    }
+    
+    //MARK: User actions
+    
+    @IBAction func filterTapped(_ sender: UIBarButtonItem) {
+        self.showAlert(message: "Select filter", forActions: [AlertAction(withTitle: "Closed", style: .default)], style: .actionSheet, callback: nil)
     }
     
 }

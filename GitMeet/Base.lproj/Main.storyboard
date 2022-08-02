@@ -23,7 +23,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Pull Requests" id="NSh-tW-eOW">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="line.3.horizontal.decrease" catalog="system" id="UUA-BB-09g"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="line.3.horizontal.decrease" catalog="system" id="UUA-BB-09g">
+                            <connections>
+                                <action selector="filterTapped:" destination="r5o-A1-WKs" id="Syx-dJ-OPy"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ScX-ga-rsy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
