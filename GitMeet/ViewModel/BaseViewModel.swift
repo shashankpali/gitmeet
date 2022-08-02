@@ -1,5 +1,5 @@
 //
-//  InputViewModel.swift
+//  BaseViewModel.swift
 //  GitMeet
 //
 //  Created by Shashank Pali on 02/08/22.
@@ -7,32 +7,31 @@
 
 import Foundation
 
-protocol InputViewModelDelegate: AnyObject {
+protocol BaseViewModelDelegate: AnyObject {
     func didReceived(pullRequests: [Request]?)
     func didError(message: String)
 }
 
-class InputViewModel {
+class BaseViewModel {
     
-    weak var delegate : InputViewModelDelegate?
+    weak var delegate : BaseViewModelDelegate?
     var network : Network
     
     init(netowrk: Network) {
         self.network = netowrk
     }
     
-    func getPullRequest(username: String, reponame: String) {
-        
+    func getEndURL(username: String, reponame: String) -> String? {
         let userRepo = (username + "/" + reponame).trimmingCharacters(in: .whitespaces)
         
-        if userRepo.count == 0 {
-            self.delegate?.didError(message: Constants.Errors.invalidInput)
-            return
-        }
+        if userRepo.count == 0 {return nil}
         
-        let urlString = Constants.baseURL + userRepo + Constants.endPoint
+        return Constants.baseURL + userRepo + Constants.endPoint
+    }
+    
+    func getPullRequest(urlString: String, page: String = "1") {
         
-        network.getData(urlString: urlString) { res in
+        network.getData(urlString: urlString + page) { res in
             
             DispatchQueue.main.async {
                 

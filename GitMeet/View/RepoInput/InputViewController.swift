@@ -13,7 +13,8 @@ class InputViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var reponameField: UITextField!
     @IBOutlet weak var fetchBtn: UIButton!
     
-    var viewModel = InputViewModel.init(netowrk: Network())
+    var viewModel = BaseViewModel.init(netowrk: Network())
+    var urlString : String?
     
     override func viewDidLoad() {
         viewModel.delegate = self
@@ -40,12 +41,13 @@ class InputViewController: UIViewController, UITextFieldDelegate {
         }
         self.view.endEditing(true)
         fetchBtn.isHidden = true
-        
-        viewModel.getPullRequest(username: usernameField.text!, reponame: reponameField.text!)
+        urlString = viewModel.getEndURL(username: usernameField.text!, reponame: reponameField.text!)
+        guard urlString?.count != 0 else {return}
+        viewModel.getPullRequest(urlString: urlString!)
     }
 }
 
-extension InputViewController: InputViewModelDelegate {
+extension InputViewController: BaseViewModelDelegate {
     
     func didReceived(pullRequests: [Request]?) {
         if pullRequests?.count == 0 {
@@ -53,8 +55,9 @@ extension InputViewController: InputViewModelDelegate {
             self.showAlert(title: "Oopss!!", message: errMsg, forActions: [AlertAction(withTitle: "Ok", style: .default)])
         }else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let pRController = storyboard.instantiateViewController(identifier: "PullRequestViewController") { coder in
-                PullRequestViewController(coder: coder, pullRequests: pullRequests!) }
+            let pRController = storyboard.instantiateViewController(identifier: "PullRequestViewController") { [unowned self] coder in
+                let model = BaseViewModel.init(netowrk: Network())
+               return PullRequestViewController(coder: coder, pullRequests: pullRequests!, viewModel: model, urlString: urlString!) }
             
             self.navigationController?.pushViewController(pRController, animated: true)
         }

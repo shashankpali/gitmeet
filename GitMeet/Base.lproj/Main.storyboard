@@ -17,6 +17,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="parentBackColor"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="vUb-5Z-xu9">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="load more data"/>
+                            <connections>
+                                <action selector="loadMoreTapped:" destination="r5o-A1-WKs" eventType="touchUpInside" id="0JT-1o-lRL"/>
+                            </connections>
+                        </button>
                         <connections>
                             <outlet property="dataSource" destination="r5o-A1-WKs" id="f0B-Dy-ycn"/>
                             <outlet property="delegate" destination="r5o-A1-WKs" id="qUB-mk-Lla"/>

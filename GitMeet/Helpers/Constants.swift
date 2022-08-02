@@ -9,7 +9,7 @@ import Foundation
 
 struct Constants {
     static let baseURL = "https://api.github.com/repos/"
-    static let endPoint = "/pulls?state=all"
+    static let endPoint = "/pulls?state=closed&page="
     
     struct Errors {
         static let invalidInput = "either username or reponame is incorrect."

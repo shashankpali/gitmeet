@@ -11,9 +11,13 @@ class PullRequestViewController: UITableViewController {
     
     let cellIdentifier = "PullRequestCell"
     var dataSource: [Request]
+    var viewModel: BaseViewModel
+    var urlString: String
     
-    required init?(coder: NSCoder, pullRequests: [Request]) {
+    required init?(coder: NSCoder, pullRequests: [Request], viewModel: BaseViewModel, urlString: String) {
         dataSource = pullRequests
+        self.viewModel = viewModel
+        self.urlString = urlString
         super.init(coder: coder)
     }
     
@@ -24,6 +28,7 @@ class PullRequestViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTable()
+        viewModel.delegate = self
     }
     
     private func setupTable() {
@@ -57,5 +62,24 @@ class PullRequestViewController: UITableViewController {
     @IBAction func filterTapped(_ sender: UIBarButtonItem) {
         self.showAlert(message: "Select filter", forActions: [AlertAction(withTitle: "Closed", style: .default)], style: .actionSheet, callback: nil)
     }
+    
+    @IBAction func loadMoreTapped(_ sender: UIButton) {
+        viewModel.getPullRequest(urlString: urlString, page: String(2))
+    }
+    
+}
+
+extension PullRequestViewController: BaseViewModelDelegate {
+    
+    func didReceived(pullRequests: [Request]?) {
+        guard let res = pullRequests else {return}
+        dataSource = dataSource + res
+        tableView.reloadData()
+    }
+    
+    func didError(message: String) {
+        
+    }
+    
     
 }
