@@ -28,10 +28,10 @@ class PullRequestCell: UITableViewCell {
         titleLabel.text = model.title
         closedAtLabel.text = model.closedAt?.convertDateFormat()
         
+        let placeholderImg = UIImage(systemName: "person.circle.fill") ?? UIImage()
+        profileImg.imageFromServerURL(urlString: model.user.avatarURL ?? "", placeholderImage: placeholderImg)
         userLabel.text = model.user.login
         createdAtLabel.text = model.createdAt.convertDateFormat()
     }
-    
-    
     
 }

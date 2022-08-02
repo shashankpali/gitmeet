@@ -94,7 +94,7 @@
                                     <constraint firstAttribute="width" secondItem="IFR-Pn-CJN" secondAttribute="height" multiplier="1:1" id="V37-lT-sGh"/>
                                     <constraint firstAttribute="height" constant="32" id="ry4-To-rkG"/>
                                 </constraints>
-                                <imageReference key="image" image="personalhotspot.circle.fill" catalog="system" symbolScale="default"/>
+                                <imageReference key="image" image="person.circle.fill" catalog="system" symbolScale="default"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="16"/>
@@ -172,7 +172,7 @@
     </objects>
     <resources>
         <image name="arrow.triangle.pull" catalog="system" width="93" height="128"/>
-        <image name="personalhotspot.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <namedColor name="childBackColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
