@@ -13,7 +13,7 @@ class InputViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var reponameField: UITextField!
     @IBOutlet weak var fetchBtn: UIButton!
     
-    var viewModel = BaseViewModel.init(netowrk: Network())
+    var viewModel = InputViewModel.init(netowrk: Network())
     var urlString : String?
     
     override func viewDidLoad() {
@@ -56,7 +56,7 @@ extension InputViewController: BaseViewModelDelegate {
         }else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let pRController = storyboard.instantiateViewController(identifier: "PullRequestViewController") { [unowned self] coder in
-                let model = BaseViewModel.init(netowrk: Network())
+                let model = PullRequestViewModel.init(netowrk: Network())
                return PullRequestViewController(coder: coder, pullRequests: pullRequests!, viewModel: model, urlString: urlString!) }
             
             self.navigationController?.pushViewController(pRController, animated: true)

@@ -17,6 +17,8 @@
 		BF74491928996DAB004B1FCC /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF74491828996DAB004B1FCC /* String+Extension.swift */; };
 		BF74491C28997217004B1FCC /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF74491B28997217004B1FCC /* UIImageView+Extension.swift */; };
 		BF74492428998ABF004B1FCC /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF74492328998ABF004B1FCC /* BaseViewModel.swift */; };
+		BF744927289990D0004B1FCC /* InputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF744926289990D0004B1FCC /* InputViewModel.swift */; };
+		BF7449292899910D004B1FCC /* PullRequestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7449282899910D004B1FCC /* PullRequestViewModel.swift */; };
 		BFB088C02898120400B18F5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB088BF2898120400B18F5D /* AppDelegate.swift */; };
 		BFB088C22898120400B18F5D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB088C12898120400B18F5D /* SceneDelegate.swift */; };
 		BFB088C42898120400B18F5D /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB088C32898120400B18F5D /* InputViewController.swift */; };
@@ -56,6 +58,8 @@
 		BF74491828996DAB004B1FCC /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		BF74491B28997217004B1FCC /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		BF74492328998ABF004B1FCC /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		BF744926289990D0004B1FCC /* InputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewModel.swift; sourceTree = "<group>"; };
+		BF7449282899910D004B1FCC /* PullRequestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestViewModel.swift; sourceTree = "<group>"; };
 		BFB088BC2898120400B18F5D /* GitMeet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitMeet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFB088BF2898120400B18F5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFB088C12898120400B18F5D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				BFB088C32898120400B18F5D /* InputViewController.swift */,
+				BF744926289990D0004B1FCC /* InputViewModel.swift */,
 			);
 			path = RepoInput;
 			sourceTree = "<group>";
@@ -135,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				BF74491128994CE9004B1FCC /* PullRequestViewController.swift */,
+				BF7449282899910D004B1FCC /* PullRequestViewModel.swift */,
 				BF74491A28997199004B1FCC /* PRCell */,
 			);
 			path = PullRequest;
@@ -362,11 +368,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF74490828992B99004B1FCC /* Network.swift in Sources */,
+				BF744927289990D0004B1FCC /* InputViewModel.swift in Sources */,
 				BF74491928996DAB004B1FCC /* String+Extension.swift in Sources */,
 				BF74491228994CEA004B1FCC /* PullRequestViewController.swift in Sources */,
 				BF74492428998ABF004B1FCC /* BaseViewModel.swift in Sources */,
 				BF744916289957A6004B1FCC /* PullRequestCell.swift in Sources */,
 				BF744905289928CC004B1FCC /* UIViewController+Extension.swift in Sources */,
+				BF7449292899910D004B1FCC /* PullRequestViewModel.swift in Sources */,
 				BFB088C42898120400B18F5D /* InputViewController.swift in Sources */,
 				BF74491C28997217004B1FCC /* UIImageView+Extension.swift in Sources */,
 				BFB088C02898120400B18F5D /* AppDelegate.swift in Sources */,

@@ -17,15 +17,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="parentBackColor"/>
-                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="vUb-5Z-xu9">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="V7h-J6-8eI">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="36"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="load more data"/>
-                            <connections>
-                                <action selector="loadMoreTapped:" destination="r5o-A1-WKs" eventType="touchUpInside" id="0JT-1o-lRL"/>
-                            </connections>
-                        </button>
+                            <subviews>
+                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="0uA-4D-It2">
+                                    <rect key="frame" x="197" y="8" width="20" height="20"/>
+                                    <color key="color" systemColor="systemBlueColor"/>
+                                </activityIndicatorView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WjX-J7-6Cm">
+                                    <rect key="frame" x="146.5" y="2.5" width="121" height="31"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="load more data"/>
+                                    <connections>
+                                        <action selector="loadMoreTapped:" destination="r5o-A1-WKs" eventType="touchUpInside" id="pko-xX-wzM"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="WjX-J7-6Cm" firstAttribute="centerY" secondItem="V7h-J6-8eI" secondAttribute="centerY" id="a00-OF-lMw"/>
+                                <constraint firstItem="0uA-4D-It2" firstAttribute="centerY" secondItem="V7h-J6-8eI" secondAttribute="centerY" id="a9q-8I-X2c"/>
+                                <constraint firstItem="WjX-J7-6Cm" firstAttribute="centerX" secondItem="V7h-J6-8eI" secondAttribute="centerX" id="sxP-Ty-j7R"/>
+                                <constraint firstItem="0uA-4D-It2" firstAttribute="centerX" secondItem="V7h-J6-8eI" secondAttribute="centerX" id="taM-G2-R2D"/>
+                            </constraints>
+                        </view>
                         <connections>
                             <outlet property="dataSource" destination="r5o-A1-WKs" id="f0B-Dy-ycn"/>
                             <outlet property="delegate" destination="r5o-A1-WKs" id="qUB-mk-Lla"/>
@@ -38,10 +54,14 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="loadMoreBtn" destination="WjX-J7-6Cm" id="sUx-8E-jko"/>
+                        <outlet property="loader" destination="0uA-4D-It2" id="Xiq-NC-UWc"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ScX-ga-rsy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="483" y="-12"/>
+            <point key="canvasLocation" x="482.60869565217394" y="-12.053571428571429"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9xR-KH-nz1">

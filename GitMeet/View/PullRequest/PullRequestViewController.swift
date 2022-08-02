@@ -9,12 +9,17 @@ import UIKit
 
 class PullRequestViewController: UITableViewController {
     
+    @IBOutlet weak var loader: UIActivityIndicatorView!
+    @IBOutlet weak var loadMoreBtn: UIButton!
+    
+    
     let cellIdentifier = "PullRequestCell"
     var dataSource: [Request]
-    var viewModel: BaseViewModel
+    var viewModel: PullRequestViewModel
     var urlString: String
+    var pageCount: Int = 1
     
-    required init?(coder: NSCoder, pullRequests: [Request], viewModel: BaseViewModel, urlString: String) {
+    required init?(coder: NSCoder, pullRequests: [Request], viewModel: PullRequestViewModel, urlString: String) {
         dataSource = pullRequests
         self.viewModel = viewModel
         self.urlString = urlString
@@ -64,7 +69,10 @@ class PullRequestViewController: UITableViewController {
     }
     
     @IBAction func loadMoreTapped(_ sender: UIButton) {
-        viewModel.getPullRequest(urlString: urlString, page: String(2))
+        loadMoreBtn.isHidden = true
+        loader.isHidden = false
+        pageCount += 1
+        viewModel.getPullRequest(urlString: urlString, page: String(pageCount))
     }
     
 }
@@ -74,12 +82,15 @@ extension PullRequestViewController: BaseViewModelDelegate {
     func didReceived(pullRequests: [Request]?) {
         guard let res = pullRequests else {return}
         dataSource = dataSource + res
+        
         tableView.reloadData()
+        loadMoreBtn.isHidden = false
+        loader.isHidden = true
     }
     
     func didError(message: String) {
-        
+        loadMoreBtn.isHidden = false
+        loader.isHidden = true
     }
-    
     
 }
