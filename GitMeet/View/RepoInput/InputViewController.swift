@@ -13,6 +13,12 @@ class InputViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var reponameField: UITextField!
     @IBOutlet weak var fetchBtn: UIButton!
     
+    var viewModel = InputViewModel.init(netowrk: Network())
+    
+    override func viewDidLoad() {
+        viewModel.delegate = self
+    }
+    
     //MARK: User actions
     
     @IBAction func fetchBtnTapped(_ sender: UIButton) {
@@ -34,6 +40,18 @@ class InputViewController: UIViewController, UITextFieldDelegate {
         }
         self.view.endEditing(true)
         fetchBtn.isHidden = true
+        
+        viewModel.getPullRequest(username: usernameField.text!, reponame: reponameField.text!)
     }
 }
 
+extension InputViewController: InputViewModelDelegate {
+    
+    func didReceived(pullRequests: [Request]?) {
+        print(pullRequests)
+    }
+    
+    func didError(message: String) {
+        
+    }
+}
