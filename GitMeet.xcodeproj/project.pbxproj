@@ -12,6 +12,7 @@
 		BF74490A28992F01004B1FCC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF74490928992F01004B1FCC /* Constants.swift */; };
 		BF74490C2899313B004B1FCC /* InputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF74490B2899313B004B1FCC /* InputViewModel.swift */; };
 		BF74490E28993921004B1FCC /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF74490D28993921004B1FCC /* RequestModel.swift */; };
+		BF74491228994CEA004B1FCC /* PullRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF74491128994CE9004B1FCC /* PullRequestViewController.swift */; };
 		BFB088C02898120400B18F5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB088BF2898120400B18F5D /* AppDelegate.swift */; };
 		BFB088C22898120400B18F5D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB088C12898120400B18F5D /* SceneDelegate.swift */; };
 		BFB088C42898120400B18F5D /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB088C32898120400B18F5D /* InputViewController.swift */; };
@@ -46,6 +47,7 @@
 		BF74490928992F01004B1FCC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BF74490B2899313B004B1FCC /* InputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewModel.swift; sourceTree = "<group>"; };
 		BF74490D28993921004B1FCC /* RequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
+		BF74491128994CE9004B1FCC /* PullRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestViewController.swift; sourceTree = "<group>"; };
 		BFB088BC2898120400B18F5D /* GitMeet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitMeet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFB088BF2898120400B18F5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFB088C12898120400B18F5D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +122,14 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		BF74491328994CF1004B1FCC /* PullRequest */ = {
+			isa = PBXGroup;
+			children = (
+				BF74491128994CE9004B1FCC /* PullRequestViewController.swift */,
+			);
+			path = PullRequest;
+			sourceTree = "<group>";
+		};
 		BFB088B32898120400B18F5D = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				BF74490328992840004B1FCC /* RepoInput */,
+				BF74491328994CF1004B1FCC /* PullRequest */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -322,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF74490828992B99004B1FCC /* Network.swift in Sources */,
+				BF74491228994CEA004B1FCC /* PullRequestViewController.swift in Sources */,
 				BF744905289928CC004B1FCC /* UIViewController+Extension.swift in Sources */,
 				BFB088C42898120400B18F5D /* InputViewController.swift in Sources */,
 				BFB088C02898120400B18F5D /* AppDelegate.swift in Sources */,
