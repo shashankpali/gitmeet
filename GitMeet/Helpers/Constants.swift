@@ -8,7 +8,7 @@
 import Foundation
 
 struct Constants {
-    static let baseUrl = "https://api.github.com/repos/"
+    static let baseURL = "https://api.github.com/repos/"
     static let endPoint = "/pulls?state=all"
     
     struct Errors {

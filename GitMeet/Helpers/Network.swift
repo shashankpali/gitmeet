@@ -13,7 +13,7 @@ enum NetworkResult<T, String> {
 
 struct Network {
     
-    static func getData<T: Codable>(urlString: String, callback:@escaping (_ res: NetworkResult<[T], String>) -> Void) {
+    static func getData<T: Codable>(urlString: String, type: T.Type, callback:@escaping (_ res: NetworkResult<[T], String>) -> Void) {
         guard let url = URL(string: urlString) else {return}
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "GET"
