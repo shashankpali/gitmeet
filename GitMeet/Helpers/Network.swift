@@ -7,13 +7,13 @@
 
 import Foundation
 
-enum NetworkResult<T, String> {
-    case success(T), failure(String)
+enum NetworkResult {
+    case success(Data), failure(String)
 }
 
 struct Network {
     
-    func getData<T: Codable>(urlString: String, type: T.Type, callback:@escaping (_ res: NetworkResult<[T]?, String>) -> Void) {
+    func getData(urlString: String, callback:@escaping (_ res: NetworkResult) -> Void) {
         guard let url = URL(string: urlString) else {return}
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "GET"
@@ -23,12 +23,7 @@ struct Network {
             guard let httpResponse = response as? HTTPURLResponse else {return callback(.failure(error?.localizedDescription ?? Constants.Errors.generic))}
             
             if 200...299 ~= httpResponse.statusCode {
-                do {
-                    let parsedData = try JSONDecoder().decode([T].self, from: data!)
-                    callback(.success(parsedData))
-                } catch {
-                    callback(.failure(error.localizedDescription ))
-                }
+                callback(.success(data!))
             }else if 400...499 ~= httpResponse.statusCode {
                 callback(.failure(error?.localizedDescription ?? Constants.Errors.invalidInput))
             }else {
@@ -36,5 +31,13 @@ struct Network {
             }
             
         }.resume()
+    }
+    
+    func parse<T: Codable>(data: Data, type: T.Type) -> [T]? {
+        do {
+            return try JSONDecoder().decode([T].self, from: data)
+        } catch {
+            return nil
+        }
     }
 }

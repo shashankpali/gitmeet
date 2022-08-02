@@ -32,13 +32,17 @@ class InputViewModel {
         
         let urlString = Constants.baseURL + userRepo + Constants.endPoint
         
-        network.getData(urlString: urlString, type: Request.self) { res in
+        network.getData(urlString: urlString) { res in
             
             DispatchQueue.main.async {
                 
                 switch res {
-                case .success(let requests):
-                    self.delegate?.didReceived(pullRequests: requests)
+                case .success(let data):
+                    if let requests = self.network.parse(data: data, type: Request.self) {
+                        self.delegate?.didReceived(pullRequests: requests)
+                        return
+                    }
+                    self.delegate?.didError(message: Constants.Errors.generic)
                     break
                 case .failure(let errMsg):
                     self.delegate?.didError(message: errMsg)
