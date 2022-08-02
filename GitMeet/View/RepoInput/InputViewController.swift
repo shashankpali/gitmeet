@@ -52,9 +52,12 @@ extension InputViewController: InputViewModelDelegate {
             let errMsg = String(format: Constants.Errors.emptyRecord, (usernameField.text! + "/" + reponameField.text!))
             self.showAlert(title: "Oopss!!", message: errMsg, forActions: [AlertAction(withTitle: "Ok", style: .default)])
         }else {
-            print(pullRequests!)
-        }
+           let pRController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "PullRequestViewController") { coder in
+                return PullRequestViewController(coder: coder, pullRequests: pullRequests!)
+            }
+            self.navigationController?.pushViewController(pRController, animated: true)
         fetchBtn.isHidden = false
+        }
     }
     
     func didError(message: String) {
