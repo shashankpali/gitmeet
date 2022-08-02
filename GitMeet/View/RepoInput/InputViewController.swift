@@ -48,10 +48,17 @@ class InputViewController: UIViewController, UITextFieldDelegate {
 extension InputViewController: InputViewModelDelegate {
     
     func didReceived(pullRequests: [Request]?) {
-        print(pullRequests)
+        if pullRequests?.count == 0 {
+            let errMsg = String(format: Constants.Errors.emptyRecord, (usernameField.text! + "/" + reponameField.text!))
+            self.showAlert(title: "Oopss!!", message: errMsg, forActions: [AlertAction(withTitle: "Ok", style: .default)])
+        }else {
+            print(pullRequests!)
+        }
+        fetchBtn.isHidden = false
     }
     
     func didError(message: String) {
-        
+        self.showAlert(title: "Error", message: message, forActions: [AlertAction(withTitle: "Ok", style: .default)])
+        fetchBtn.isHidden = false
     }
 }
