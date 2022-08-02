@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,10 +13,70 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y1Z-X4-wIw">
+                                <rect key="frame" x="157.5" y="395" width="99" height="106.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="point.topleft.down.curvedto.point.bottomright.up.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="voc-p5-N5L">
+                                        <rect key="frame" x="19.5" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="4si-Tl-etW"/>
+                                            <constraint firstAttribute="width" secondItem="voc-p5-N5L" secondAttribute="height" multiplier="1:1" id="kyK-Zy-fcn"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6du-tm-6ZP">
+                                        <rect key="frame" x="0.0" y="68" width="99" height="38.5"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="G">
+                                                <attributes>
+                                                    <font key="NSFont" size="32" name="HelveticaNeue-Medium"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="it">
+                                                <attributes>
+                                                    <font key="NSFont" size="24" name="HelveticaNeue"/>
+                                                    <font key="NSOriginalFont" size="24" name="HelveticaNeue-Light"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="M">
+                                                <attributes>
+                                                    <font key="NSFont" size="32" name="HelveticaNeue-Medium"/>
+                                                    <font key="NSOriginalFont" size="32" name="HelveticaNeue-Medium"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="eet">
+                                                <attributes>
+                                                    <font key="NSFont" size="24" name="HelveticaNeue"/>
+                                                    <font key="NSOriginalFont" size="24" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="6du-tm-6ZP" secondAttribute="bottom" id="0ew-8Y-kph"/>
+                                    <constraint firstItem="6du-tm-6ZP" firstAttribute="leading" secondItem="Y1Z-X4-wIw" secondAttribute="leading" id="53M-5Y-83v"/>
+                                    <constraint firstItem="voc-p5-N5L" firstAttribute="centerX" secondItem="Y1Z-X4-wIw" secondAttribute="centerX" id="6Ni-bj-n6r"/>
+                                    <constraint firstItem="voc-p5-N5L" firstAttribute="top" secondItem="Y1Z-X4-wIw" secondAttribute="top" id="JAz-Wa-rhA"/>
+                                    <constraint firstAttribute="trailing" secondItem="6du-tm-6ZP" secondAttribute="trailing" id="NZ7-Jl-6t7"/>
+                                    <constraint firstItem="6du-tm-6ZP" firstAttribute="top" secondItem="voc-p5-N5L" secondAttribute="bottom" constant="8" symbolic="YES" id="yNX-sQ-7Nz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="parentBackColor"/>
+                        <constraints>
+                            <constraint firstItem="Y1Z-X4-wIw" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="RZS-L3-8ah"/>
+                            <constraint firstItem="Y1Z-X4-wIw" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="eoV-HO-8Mx"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -22,4 +84,10 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="point.topleft.down.curvedto.point.bottomright.up.fill" catalog="system" width="121" height="128"/>
+        <namedColor name="parentBackColor">
+            <color red="0.93699997663497925" green="0.95300000905990601" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
