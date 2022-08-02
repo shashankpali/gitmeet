@@ -68,10 +68,10 @@
                                 <color key="textColor" systemColor="systemGrayColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shashank Pali" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqi-Rq-zh8">
-                                <rect key="frame" x="60" y="132" width="100.5" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 Jan 2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5E1-mN-nc2">
+                                <rect key="frame" x="142" y="71.5" width="92" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BA1-qX-ymr">
@@ -101,14 +101,14 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2y" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YLB-bE-XlU">
-                                <rect key="frame" x="182.5" y="132" width="18" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shashank Pali" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqi-Rq-zh8">
+                                <rect key="frame" x="60" y="132" width="100.5" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 Jan 2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5E1-mN-nc2">
-                                <rect key="frame" x="142" y="71.5" width="92" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2y" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="YLB-bE-XlU">
+                                <rect key="frame" x="182.5" y="132" width="18" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" systemColor="systemGrayColor"/>
                                 <nil key="highlightedColor"/>
@@ -122,6 +122,7 @@
                             <constraint firstItem="IFR-Pn-CJN" firstAttribute="top" secondItem="Ogu-IO-gU6" secondAttribute="bottom" constant="16" id="BQl-8f-dtm"/>
                             <constraint firstItem="Ogu-IO-gU6" firstAttribute="leading" secondItem="UDN-eR-KDH" secondAttribute="leading" id="Dlc-3j-mZF"/>
                             <constraint firstItem="IFR-Pn-CJN" firstAttribute="leading" secondItem="Ogu-IO-gU6" secondAttribute="leading" id="JCw-UO-ryJ"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5E1-mN-nc2" secondAttribute="trailing" constant="20" symbolic="YES" id="KTV-vR-fCi"/>
                             <constraint firstItem="a3F-M3-CuY" firstAttribute="leading" secondItem="ggB-Kl-Ndx" secondAttribute="trailing" constant="8" id="NFd-Pn-doV"/>
                             <constraint firstItem="gqi-Rq-zh8" firstAttribute="centerY" secondItem="IFR-Pn-CJN" secondAttribute="centerY" id="NvJ-Kc-k5k"/>
                             <constraint firstItem="a3F-M3-CuY" firstAttribute="centerY" secondItem="ggB-Kl-Ndx" secondAttribute="centerY" constant="-2" id="PnI-u3-jrY"/>
@@ -133,6 +134,7 @@
                             <constraint firstItem="Ogu-IO-gU6" firstAttribute="top" secondItem="ggB-Kl-Ndx" secondAttribute="bottom" constant="8" symbolic="YES" id="Yv6-4X-R80"/>
                             <constraint firstItem="BA1-qX-ymr" firstAttribute="leading" secondItem="gqi-Rq-zh8" secondAttribute="trailing" constant="8" symbolic="YES" id="aPx-i7-rQ5"/>
                             <constraint firstItem="ggB-Kl-Ndx" firstAttribute="leading" secondItem="UDN-eR-KDH" secondAttribute="leading" id="beC-Il-kxd"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YLB-bE-XlU" secondAttribute="trailing" constant="20" id="gdk-r0-f87"/>
                             <constraint firstItem="UDN-eR-KDH" firstAttribute="top" secondItem="Y4h-Ab-Bm5" secondAttribute="top" constant="20" symbolic="YES" id="hT0-kc-UqJ"/>
                             <constraint firstAttribute="bottom" secondItem="IFR-Pn-CJN" secondAttribute="bottom" constant="20" symbolic="YES" id="ia7-LI-bDE"/>
                             <constraint firstItem="ggB-Kl-Ndx" firstAttribute="top" secondItem="UDN-eR-KDH" secondAttribute="bottom" constant="8" symbolic="YES" id="jaD-EY-nXr"/>
@@ -156,6 +158,15 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="dNz-fn-3J2"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="closedAtLabel" destination="5E1-mN-nc2" id="mxV-Tr-4tO"/>
+                <outlet property="createdAtLabel" destination="YLB-bE-XlU" id="cSt-jM-Uwx"/>
+                <outlet property="profileImg" destination="IFR-Pn-CJN" id="qlT-aE-knO"/>
+                <outlet property="statusImg" destination="tbm-RH-HUK" id="BQX-Nz-H23"/>
+                <outlet property="statusLabel" destination="2Ae-WU-29T" id="qpu-JJ-YVh"/>
+                <outlet property="titleLabel" destination="UDN-eR-KDH" id="0WX-SE-GX2"/>
+                <outlet property="userLabel" destination="gqi-Rq-zh8" id="kCF-Lx-29z"/>
+            </connections>
             <point key="canvasLocation" x="179.71014492753625" y="-6.3616071428571423"/>
         </tableViewCell>
     </objects>

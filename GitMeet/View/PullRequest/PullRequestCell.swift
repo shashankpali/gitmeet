@@ -9,15 +9,29 @@ import UIKit
 
 class PullRequestCell: UITableViewCell {
 
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var statusImg: UIImageView!
+    @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var closedAtLabel: UILabel!
+    
+    @IBOutlet weak var profileImg: UIImageView!
+    @IBOutlet weak var userLabel: UILabel!
+    @IBOutlet weak var createdAtLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func setup(model: Request) {
+        titleLabel.text = model.title
+        closedAtLabel.text = model.closedAt?.convertDateFormat()
+        
+        userLabel.text = model.user.login
+        createdAtLabel.text = model.createdAt.convertDateFormat()
     }
+    
+    
     
 }
