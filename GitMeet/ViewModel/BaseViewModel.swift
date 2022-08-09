@@ -22,11 +22,12 @@ class BaseViewModel {
     }
     
     func getEndURL(username: String, reponame: String) -> String? {
-        let userRepo = (username + "/" + reponame).trimmingCharacters(in: .whitespaces)
+        let user = username.trimmingCharacters(in: .whitespaces)
+        let repo = reponame.trimmingCharacters(in: .whitespaces)
         
-        if userRepo.count == 0 {return nil}
+        guard user.count != 0 && repo.count != 0 else {return nil}
         
-        return Constants.baseURL + userRepo + Constants.endPoint
+        return Constants.baseURL + user + "/" + repo + Constants.endPoint
     }
     
     func getPullRequest(urlString: String, page: String = "1") {
